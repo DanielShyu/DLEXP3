@@ -1,0 +1,6 @@
+{
+  "time_points": [100000, 200000, 500000, 1000000,2000000,5000000,10000000],
+  "num_runs": 5,
+  "base_seed": 42,
+  "policies": ["DLEXP3", "BETA_DLEXP3", "CENTRALIZED_LINEXP3","DEXP3"]
+}

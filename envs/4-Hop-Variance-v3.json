@@ -1,0 +1,422 @@
+{
+  "metadata": {
+    "L": 4,
+    "K": 2,
+    "d": 4,
+    "description": "4-Hop-Variance-v3: H=4,K=2 (16 leaves), stationary, deliberately engineered. Two dominant, diametrically-opposed job archetypes (J0 small/small p=0.42 -> always-A path; J1 large/large p=0.42 -> always-B path) plus 5 rare archetypes (p=0.02-0.04) for good Sigma conditioning. Each server is CHEAP in its own regime and EXPENSIVE in the other's (symmetric magnitude), and cross-purpose leakage is zeroed out (decode servers carry no prefill cost and vice versa) so the [1,2] min-max normalization's constant-shift dilution effect is minimized. Targets eps-EXP3/UNIFORM excess cost >20% vs optimal (well above it, by design margin)."
+  },
+  "context_distribution": {
+    "vectors": [
+      [
+        0.05,
+        0.0025000000000000005,
+        0.05,
+        1.0
+      ],
+      [
+        0.95,
+        0.9025,
+        0.95,
+        1.0
+      ],
+      [
+        0.4669,
+        0.21799560999999998,
+        0.885,
+        1.0
+      ],
+      [
+        0.6047,
+        0.36566209,
+        0.075,
+        1.0
+      ],
+      [
+        0.4142,
+        0.17156164000000002,
+        0.06470000000000001,
+        1.0
+      ],
+      [
+        0.45430000000000004,
+        0.20638849000000004,
+        0.682,
+        1.0
+      ],
+      [
+        0.5322,
+        0.28323684,
+        0.119,
+        1.0
+      ]
+    ],
+    "probabilities": [
+      0.42,
+      0.42,
+      0.04,
+      0.04,
+      0.03,
+      0.03,
+      0.02
+    ]
+  },
+  "tree": {
+    "arm_A1A2A3A4": {
+      "type": "leaf"
+    },
+    "arm_A1A2A3B4": {
+      "type": "leaf"
+    },
+    "n000": {
+      "type": "internal",
+      "children": [
+        "arm_A1A2A3A4",
+        "arm_A1A2A3B4"
+      ]
+    },
+    "arm_A1A2B3A4": {
+      "type": "leaf"
+    },
+    "arm_A1A2B3B4": {
+      "type": "leaf"
+    },
+    "n001": {
+      "type": "internal",
+      "children": [
+        "arm_A1A2B3A4",
+        "arm_A1A2B3B4"
+      ]
+    },
+    "n00": {
+      "type": "internal",
+      "children": [
+        "n000",
+        "n001"
+      ]
+    },
+    "arm_A1B2A3A4": {
+      "type": "leaf"
+    },
+    "arm_A1B2A3B4": {
+      "type": "leaf"
+    },
+    "n010": {
+      "type": "internal",
+      "children": [
+        "arm_A1B2A3A4",
+        "arm_A1B2A3B4"
+      ]
+    },
+    "arm_A1B2B3A4": {
+      "type": "leaf"
+    },
+    "arm_A1B2B3B4": {
+      "type": "leaf"
+    },
+    "n011": {
+      "type": "internal",
+      "children": [
+        "arm_A1B2B3A4",
+        "arm_A1B2B3B4"
+      ]
+    },
+    "n01": {
+      "type": "internal",
+      "children": [
+        "n010",
+        "n011"
+      ]
+    },
+    "n0": {
+      "type": "internal",
+      "children": [
+        "n00",
+        "n01"
+      ]
+    },
+    "arm_B1A2A3A4": {
+      "type": "leaf"
+    },
+    "arm_B1A2A3B4": {
+      "type": "leaf"
+    },
+    "n100": {
+      "type": "internal",
+      "children": [
+        "arm_B1A2A3A4",
+        "arm_B1A2A3B4"
+      ]
+    },
+    "arm_B1A2B3A4": {
+      "type": "leaf"
+    },
+    "arm_B1A2B3B4": {
+      "type": "leaf"
+    },
+    "n101": {
+      "type": "internal",
+      "children": [
+        "arm_B1A2B3A4",
+        "arm_B1A2B3B4"
+      ]
+    },
+    "n10": {
+      "type": "internal",
+      "children": [
+        "n100",
+        "n101"
+      ]
+    },
+    "arm_B1B2A3A4": {
+      "type": "leaf"
+    },
+    "arm_B1B2A3B4": {
+      "type": "leaf"
+    },
+    "n110": {
+      "type": "internal",
+      "children": [
+        "arm_B1B2A3A4",
+        "arm_B1B2A3B4"
+      ]
+    },
+    "arm_B1B2B3A4": {
+      "type": "leaf"
+    },
+    "arm_B1B2B3B4": {
+      "type": "leaf"
+    },
+    "n111": {
+      "type": "internal",
+      "children": [
+        "arm_B1B2B3A4",
+        "arm_B1B2B3B4"
+      ]
+    },
+    "n11": {
+      "type": "internal",
+      "children": [
+        "n110",
+        "n111"
+      ]
+    },
+    "n1": {
+      "type": "internal",
+      "children": [
+        "n10",
+        "n11"
+      ]
+    },
+    "root": {
+      "type": "internal",
+      "children": [
+        "n0",
+        "n1"
+      ]
+    }
+  },
+  "arm_parameters": {
+    "arm_A1A2A3A4": [
+      [
+        0.0,
+        [
+          0.5555509578607478,
+          0.0,
+          0.5555509578607478,
+          0.9444449042139252
+        ]
+      ]
+    ],
+    "arm_A1A2A3B4": [
+      [
+        0.0,
+        [
+          0.0,
+          0.0,
+          0.5555509578607478,
+          1.2222224521069627
+        ]
+      ]
+    ],
+    "arm_A1A2B3A4": [
+      [
+        0.0,
+        [
+          0.5555509578607478,
+          0.0,
+          0.0,
+          1.2222224521069627
+        ]
+      ]
+    ],
+    "arm_A1A2B3B4": [
+      [
+        0.0,
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.5
+        ]
+      ]
+    ],
+    "arm_A1B2A3A4": [
+      [
+        0.0,
+        [
+          0.0,
+          0.0,
+          0.5555509578607478,
+          1.2222224521069627
+        ]
+      ]
+    ],
+    "arm_A1B2A3B4": [
+      [
+        0.0,
+        [
+          -0.5555509578607478,
+          0.0,
+          0.5555509578607478,
+          1.5
+        ]
+      ]
+    ],
+    "arm_A1B2B3A4": [
+      [
+        0.0,
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.5
+        ]
+      ]
+    ],
+    "arm_A1B2B3B4": [
+      [
+        0.0,
+        [
+          -0.5555509578607478,
+          0.0,
+          0.0,
+          1.7777775478930375
+        ]
+      ]
+    ],
+    "arm_B1A2A3A4": [
+      [
+        0.0,
+        [
+          0.5555509578607478,
+          0.0,
+          0.0,
+          1.2222224521069627
+        ]
+      ]
+    ],
+    "arm_B1A2A3B4": [
+      [
+        0.0,
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.5
+        ]
+      ]
+    ],
+    "arm_B1A2B3A4": [
+      [
+        0.0,
+        [
+          0.5555509578607478,
+          0.0,
+          -0.5555509578607478,
+          1.5
+        ]
+      ]
+    ],
+    "arm_B1A2B3B4": [
+      [
+        0.0,
+        [
+          0.0,
+          0.0,
+          -0.5555509578607478,
+          1.7777775478930375
+        ]
+      ]
+    ],
+    "arm_B1B2A3A4": [
+      [
+        0.0,
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.5
+        ]
+      ]
+    ],
+    "arm_B1B2A3B4": [
+      [
+        0.0,
+        [
+          -0.5555509578607478,
+          0.0,
+          0.0,
+          1.7777775478930375
+        ]
+      ]
+    ],
+    "arm_B1B2B3A4": [
+      [
+        0.0,
+        [
+          0.0,
+          0.0,
+          -0.5555509578607478,
+          1.7777775478930375
+        ]
+      ]
+    ],
+    "arm_B1B2B3B4": [
+      [
+        0.0,
+        [
+          -0.5555509578607478,
+          0.0,
+          -0.5555509578607478,
+          2.055555095786075
+        ]
+      ]
+    ]
+  },
+  "sigma_inv": [
+    [
+      206.67113915687827,
+      -181.0283269888967,
+      -19.974444896539456,
+      -17.480703646675074
+    ],
+    [
+      -181.02832698889623,
+      199.5505906662411,
+      -18.908645679472762,
+      15.67039665516776
+    ],
+    [
+      -19.97444489653989,
+      -18.90864567947235,
+      39.46148786636954,
+      -1.1384160104477865
+    ],
+    [
+      -17.480703646675074,
+      15.670396655167806,
+      -1.1384160104478303,
+      3.6941625405728367
+    ]
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "L": 2,
+    "K": 2,
+    "d": 4,
+    "description": "Physically-grounded 3-layer split-inference system (2 server hops, K=2 fixed as the controlled branching factor, 4 leaves). Odd hops split on decode speed (output tokens m); even hops split on prefill speed (input tokens n). Same 4 job archetypes and Sigma as the other H-variants in this family, enabling direct H=1/2/3/4 depth comparison via compare_policies.py."
+  },
+  "context_distribution": {
+    "vectors": [
+      [
+        0.44,
+        0.1936,
+        0.25,
+        1.0
+      ],
+      [
+        0.015,
+        0.000225,
+        0.7,
+        1.0
+      ],
+      [
+        0.99,
+        0.9801,
+        0.16,
+        1.0
+      ],
+      [
+        0.57,
+        0.32489999999999997,
+        0.77,
+        1.0
+      ]
+    ],
+    "probabilities": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  "tree": {
+    "arm_A1A2": {
+      "type": "leaf"
+    },
+    "arm_A1B2": {
+      "type": "leaf"
+    },
+    "n0": {
+      "type": "internal",
+      "children": [
+        "arm_A1A2",
+        "arm_A1B2"
+      ]
+    },
+    "arm_B1A2": {
+      "type": "leaf"
+    },
+    "arm_B1B2": {
+      "type": "leaf"
+    },
+    "n1": {
+      "type": "internal",
+      "children": [
+        "arm_B1A2",
+        "arm_B1B2"
+      ]
+    },
+    "root": {
+      "type": "internal",
+      "children": [
+        "n0",
+        "n1"
+      ]
+    }
+  },
+  "arm_parameters": {
+    "arm_A1A2": [
+      [
+        0.0,
+        [
+          0.321670708170436,
+          0.29692680754194095,
+          0.618597515712377,
+          0.007423170188548525
+        ]
+      ]
+    ],
+    "arm_A1B2": [
+      [
+        0.0,
+        [
+          0.19795120502796063,
+          0.17320730439946555,
+          0.618597515712377,
+          0.10021279754540506
+        ]
+      ]
+    ],
+    "arm_B1A2": [
+      [
+        0.0,
+        [
+          0.321670708170436,
+          0.29692680754194095,
+          0.3711585094274262,
+          0.13114267333102392
+        ]
+      ]
+    ],
+    "arm_B1B2": [
+      [
+        0.0,
+        [
+          0.19795120502796063,
+          0.17320730439946555,
+          0.3711585094274262,
+          0.22393230068788045
+        ]
+      ]
+    ]
+  },
+  "sigma_inv": [
+    [
+      82.63321883164858,
+      -72.6722292631233,
+      2.9765369285924614,
+      -15.79471783655623
+    ],
+    [
+      -72.67222926312328,
+      76.16469587750973,
+      7.99366545306541,
+      4.312225153705476
+    ],
+    [
+      2.9765369285924774,
+      7.993665453065398,
+      23.21504667442454,
+      -15.405778820430678
+    ],
+    [
+      -15.794717836556252,
+      4.3122251537055005,
+      -15.405778820430676,
+      14.581487439266967
+    ]
+  ]
+}
