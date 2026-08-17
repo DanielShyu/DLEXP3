@@ -8,3 +8,5 @@ wheels/
 results/
 # Virtual environments
 .venv
+# sript
+run.sh
