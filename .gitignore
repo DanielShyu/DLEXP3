@@ -9,4 +9,4 @@ results/
 # Virtual environments
 .venv
 # sript
-run.sh
+run*.sh

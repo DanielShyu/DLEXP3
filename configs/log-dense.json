@@ -23,6 +23,6 @@
 ],
   "num_runs": 5,
   "base_seed": 42,
-  "policies": ["DLEXP3", "BETA_DLEXP3", "CENTRALIZED_LINEXP3","DEXP3","UNIFORM"],
+  "policies": ["DLEXP3", "BETA_DLEXP3", "CENTRALIZED_LINEXP3","DEXP3","UNIFORM","LINEXP3"],
   "alpha": 0.5
 }
