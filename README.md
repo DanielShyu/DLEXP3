@@ -9,7 +9,7 @@ adversarial-environment search tooling.
 Requires [uv](https://docs.astral.sh/uv/).
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/DanielShyu/DLEXP3.git
 cd dlexp3
 uv sync
 ```
