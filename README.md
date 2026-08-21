@@ -1,8 +1,7 @@
 # DLExp3
 
 Simulation framework for distributed linear contextual bandit routing
-(DLExp3 / DLExp3-SE) in a tree-structured multi-hop network, plus
-adversarial-environment search tooling.
+(DLExp3 / DLExp3-SE) in a tree-structured multi-hop network
 
 ## Setup
 
@@ -93,18 +92,6 @@ injected randomness. Omit it for old configs / no injected noise.
 `DLEXP3`, `BETA_DLEXP3` (DLExp3-SE), `LINEXP3` (local LinExp3),
 `CENTRALIZED_LINEXP3`, `CE_DLEXP3`, `DEXP3` (ε-EXP3, context-free),
 `UNIFORM`.
-
-## Adversarial Environment Search (SkyDiscover)
-
-`initial_program.py` / `evaluator.py` / `config.yaml` set up an
-[SkyDiscover](https://github.com/skydiscover-ai/skydiscover) search task
-that evolves `build_environment()` to maximize how close a target
-policy's regret gets to linear (currently: local `LINEXP3`). Run with:
-
-```bash
-uv run skydiscover-run initial_program.py evaluator.py \
-    --config config.yaml --search adaevolve --iterations 100
-```
 
 Pull an evolved result back into this repo's environment format with:
 
