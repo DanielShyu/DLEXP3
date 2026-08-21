@@ -80,9 +80,6 @@ injected randomness. Omit it for old configs / no injected noise.
 | File | Purpose |
 |---|---|
 | `main.py` | Core simulation engine + per-env plotting |
-| `compare_policies.py` | Re-plot / cross-environment comparison from existing `*_output.json` |
-| `plot.py` | Standalone regret/optimal-cost ratio plots |
-| `misspec_ratio.py` | Standalone misspecification-ratio plots |
 | `envs/` | Environment JSON files |
 | `configs/` | Run config JSON files |
 | `results/` | Simulation output (one subfolder per environment) |
